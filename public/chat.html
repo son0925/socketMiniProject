@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <div class="chat">
+    <div class="chat__sidebar" id="sidebar"></div>
+    <div class="chat__main">
+      <div id="messages" class="chat__messages"></div>
+      <div class="form__container">
+        <form action="" id="message-form">
+          <input type="text" name="messages" placeholder="메시지를 입력하세요">
+          <button>전송</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./js/chat.js"></script>
+</body>
+</html>
