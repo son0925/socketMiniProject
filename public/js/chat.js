@@ -1,10 +1,20 @@
 const socket = io('ws://localhost:4000');
 
+const query = new URLSearchParams(location.search);
+// ?username=John&room=Roomy'
 
-socket.on('join', () => {})
+const username = query.get('username');
+
+const room = query.get('room');
 
 
-socket.on('message', () => {})
 
 
-socket.on('disconnect', () => {})
+socket.emit('join', {username, room}, (error) => {
+  if (error) {
+    alert(error);
+    location.href = '/';
+  }
+}) 
+
+socket.on('message')
